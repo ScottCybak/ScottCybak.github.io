@@ -63,11 +63,7 @@ export const links: SocialLink[] = [
 	{
 		href: 'https://github.com/scottcybak',
 		label: 'GitHub',
-	},
-	{
-		href: 'https://www.linkedin.com/in/scott-cybak-1134b75a/',
-		label: 'Linkedin',
-	},
+	}
 ];
 
 export const experience: Experience[] = [

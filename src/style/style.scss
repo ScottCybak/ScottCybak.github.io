@@ -93,6 +93,7 @@ header {
 	display: flex;
 	padding: calc(var(--padding) / 2) var(--padding);
 	position: relative;
+	align-items: center;
 	
 	watermark {
 		font-size: 15vw;
