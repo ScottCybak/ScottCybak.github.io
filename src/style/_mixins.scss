@@ -1,0 +1,39 @@
+@import './variables';
+
+@mixin dark {
+	@media (prefers-color-scheme: dark) {
+		@content;
+	}
+}
+
+@mixin light {
+	@media (prefers-color-scheme: light) {
+		@content;
+	}
+}
+
+
+@mixin sm {
+	@media screen and (max-width: $breakpoint-sm-max) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media screen and (min-width: $breakpoint-sm-max + 1px) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media screen and (min-width: $breakpoint-md-max + 1px) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media screen and (min-width: $breakpoint-lg-max + 1px) {
+		@content;
+	}
+}
+

@@ -1,0 +1,41 @@
+@import './ua/default'; // ensure this is loaded first!
+@import './ua/android';
+@import './ua/ios';
+@import './ua/linux';
+@import './ua/mac';
+@import './ua/windows';
+
+$breakpoint-sm-max: 640px;
+$breakpoint-md-max: 1200px;
+$breakpoint-lg-max: 1920px;
+
+
+:root {
+	--space: "\00a0";
+	--border-width: 2px;
+	--border-style: solid;
+	--border-radius: 6px;
+	--line-height: 1.5;
+	--font-size-small: 0.8rem;
+	--font-size-large: 1.5rem;
+	--watermark-font-size: 64px;
+
+	--mint: #b5d5b7;
+	--orange: #efbb5d;
+
+	--dark-background: #333;
+	--dark-background-even: #222;
+	--dark-background-alternate: #ffffff11;
+	--dark-color: #ddd;
+	--dark-border-color: #555;
+	--dark-border: var(--border-width) var(--border-style) var(--dark-border-color);
+	--dark-link: var(--orange);
+
+	--light-background: #eee;
+	--light-background-alternate: #ddd;
+	--light-background-even: #fff;
+	--light-color: #444;
+	--light-border-color: #ddd;
+	--light-border: var(--border-width) var(--border-style) var(--light-border-color);
+	--light-link: var(--orange);
+}

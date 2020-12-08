@@ -1,0 +1,27 @@
+{
+  "name": "scottcybak",
+  "version": "0.0.1",
+  "description": "A typescript boilerplate, with lite-server, webpack and sass",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack -w & npm run dev-sass & lite-server --baseDir=\"\"",
+    "build-sass": "sass src/style/style.scss style.css",
+    "dev-sass": "sass --watch src/style/style.scss style.css"
+  },
+  "author": "Scott Cybak <scott.cybak@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^6.6.3"
+  },
+  "devDependencies": {
+    "@types/es6-shim": "^0.31.41",
+    "lite-server": "^2.6.1",
+    "mini-css-extract-plugin": "^1.3.1",
+    "sass": "^1.29.0",
+    "ts-loader": "^8.0.11",
+    "typescript": "^4.1.2",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
