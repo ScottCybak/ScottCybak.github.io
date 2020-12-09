@@ -3,8 +3,6 @@ import { experience, links, Experience, MONTHS_SHORT, MONTHS, CATEGORY, Screensh
 import { monthDiff } from "./func/date";
 import { Dom } from "./lib/dom";
 
-// 
-
 export class App {
 
 	private _all = experience.sort((a, b) => b.from.getTime() - a.from.getTime());
@@ -40,7 +38,6 @@ export class App {
 			cats = Object.values(CATEGORY),
 			inUse = new Set(this._all.map(a => a.category));
 
-		// if its there, it'll be ignored...
 		inUse.add(CATEGORY.ALL);
 
 		Array.from(inUse)
@@ -63,14 +60,7 @@ export class App {
 		// no need to empty/generate again...
 		if (this._lastPreview !== ss) {
 			dom.empty(node);
-
 			node.innerHTML = `<div class="wrapper"><img src="/img/${ss.path}"></div>`;
-				// <div class="heading">
-				// 	${ss.description || 'No Description'}
-				// 	<div class="close">x</div>
-				// </div>
-				// <div class="image" style="background-image: url('/img/${ss.path}');"></div>
-			// `;
 		}
 
 		this._lastPreview = ss;

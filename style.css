@@ -33,6 +33,7 @@
   --line-height: 1.5;
   --font-size-small: 0.8rem;
   --font-size-large: 1.5rem;
+  --font-size-tiny: 0.7rem;
   --watermark-font-size: 64px;
   --accent-color: #b5d5b7;
   --link-color: #efbb5d;
@@ -90,6 +91,7 @@
   --line-height: 1.5;
   --font-size-small: 0.8rem;
   --font-size-large: 1.5rem;
+  --font-size-tiny: 0.7rem;
   --watermark-font-size: 64px;
   --accent-color: #b5d5b7;
   --link-color: #efbb5d;
@@ -235,8 +237,18 @@ body {
   height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
 }
-body .header {
+body .header, body .footer {
   flex: 0 0 auto;
+}
+body .footer {
+  font-size: var(--font-size-tiny);
+  background: var(--background-even);
+  border-top: var(--border);
+  padding: var(--padding);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 body .frame {
   flex: 1 1 auto;
