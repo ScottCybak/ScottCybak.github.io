@@ -231,7 +231,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  height: calc(var(--vw, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
 }
 body .header {
@@ -471,7 +471,7 @@ body .frame #now, body .frame #epoch {
   z-index: 1;
   width: 100vw;
   height: 100vh;
-  height: calc(var(--vw, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -508,9 +508,9 @@ body .frame #now, body .frame #epoch {
 
   .panel {
     padding-top: 10vh;
-    padding-top: calc(var(--vw, 1vh) * 10);
+    padding-top: calc(var(--vh, 1vh) * 10);
     padding-bottom: 10vh;
-    padding-bottom: calc(var(--vw, 1vh) * 10);
+    padding-bottom: calc(var(--vh, 1vh) * 10);
   }
 
   .description {

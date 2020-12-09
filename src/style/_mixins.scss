@@ -39,5 +39,5 @@
 
 @mixin vh($property, $percent) {
 	#{$property}: #{$percent}vh;
-	#{$property}: calc(var(--vw, 1vh) * #{$percent});
+	#{$property}: calc(var(--vh, 1vh) * #{$percent});
 }
