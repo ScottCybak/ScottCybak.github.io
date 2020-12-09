@@ -422,3 +422,19 @@ body {
 		}
 	}
 }
+
+
+@include sm {
+	.prefix,
+	#timeline, 
+	#now,
+	#epoch {
+		display: none;
+	}
+	.panel {
+		padding: 10vh var(--padding);
+	}
+	.description {
+		font-size: var(--font-size-small);
+	}
+}
