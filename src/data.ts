@@ -119,13 +119,13 @@ export const experience: Experience[] = [
 		positions: [POSITION.STORE_MGR, POSITION.SALES],
 		description: 'Seasonal sales-associate to Store Manager of a "B" volume store.',
 	},
-	{
-		to: new Date(2006, 10, 1),
-		from: new Date(2005, 10, 1),
-		company: 'Future Shop',
-		location: WINDSOR,
-		category: CATEGORY.RETAIL,
-		positions: [POSITION.SALES],
-		description: 'Sales associate in the IPG/Computer department, where my extended warranty and attach rates consistently kept me in the top-10 nationwide',
-	}
+	// {
+	// 	to: new Date(2006, 10, 1),
+	// 	from: new Date(2005, 10, 1),
+	// 	company: 'Future Shop',
+	// 	location: WINDSOR,
+	// 	category: CATEGORY.RETAIL,
+	// 	positions: [POSITION.SALES],
+	// 	description: 'Sales associate in the IPG/Computer department, where my extended warranty and attach rates consistently kept me in the top-10 nationwide',
+	// }
 ]
