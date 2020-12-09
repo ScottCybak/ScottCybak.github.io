@@ -7,7 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<script>
+		// add our ua sniffer
 		document.documentElement.setAttribute('data-ua', navigator.userAgent);
+
+		// webkit browsers get janky with their toolbars on mobile, so lets fix that
+		// with a dirty "hack"
+		function onResize() {
+			document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+		};
+		onResize();
+		addEventListener('resize', () => onResize()); // very little is going on, so.. ignore debouncing
 	</script>
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<script src="./app.js" defer async></script>

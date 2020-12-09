@@ -123,8 +123,7 @@ body, input, textarea, button {
 body {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
-	height: -webkit-fill-available;
+	@include vh('height', 100);
 	overflow: hidden;
 
 	.header {
@@ -395,7 +394,7 @@ body {
 	position: absolute;
 	z-index: 1;
 	width: 100vw;
-	height: 100vh;
+	@include vh('height', 100);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -436,7 +435,8 @@ body {
 		display: none;
 	}
 	.panel {
-		padding: 10vh var(--padding);
+		@include vh('padding-top', 10);
+		@include vh('padding-bottom', 10);
 	}
 	.description {
 		font-size: var(--font-size-small);
