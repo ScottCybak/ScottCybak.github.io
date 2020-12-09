@@ -188,14 +188,14 @@ body, input, textarea, button {
   list-style-type: none;
 }
 
-header {
+.header {
   background: var(--background-alternate);
   display: flex;
   padding: calc(var(--padding) / 2) var(--padding);
   position: relative;
   align-items: center;
 }
-header watermark {
+.header .watermark {
   font-size: 15vw;
   line-height: 1;
   top: calc(0px - var(--padding) * 2);
@@ -207,10 +207,10 @@ header watermark {
   opacity: 0.15;
   font-weight: bold;
 }
-header name {
+.header .name {
   font-size: calc(var(--font-size-large) * 2);
 }
-header #socialLinks {
+.header #socialLinks {
   flex: 1 1 auto;
   margin: 0;
   text-align: right;
@@ -222,7 +222,7 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-body header, body footer {
+body .header {
   flex: 0 0 auto;
 }
 body .frame {
