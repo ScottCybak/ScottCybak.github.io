@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -w & npm run dev-sass & lite-server --baseDir=\"\"",
+    "start": "webpack -w & npm run dev-sass & lite-server",
     "build-sass": "sass src/style/style.scss style.css",
     "dev-sass": "sass --watch src/style/style.scss style.css"
   },
