@@ -18,6 +18,10 @@ export class App {
 		private _dom: Dom,
 	) { }
 
+	viewheightHack() {
+		this._dom.root.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+	};
+
 	applyFilter(key: CATEGORY) {
 		const fil = this._filter;
 		if (fil.getValue() !== key) {
@@ -149,6 +153,10 @@ export class App {
 		});
 
 		this._dom.byId('preview').addEventListener('click', () => this.closeImage());
+
+		addEventListener('resize', () => this.viewheightHack());
+
+		this._dom.root.setAttribute('data-ua', navigator.userAgent);
 
 		return this;
 	}

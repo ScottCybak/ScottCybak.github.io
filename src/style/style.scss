@@ -9,7 +9,6 @@ html {
 	width: var(--padding);
 }
 
-
 :root {
 	--border-color: var(--light-border-color);
 	--border: var(--light-border);
@@ -140,6 +139,12 @@ body {
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
+
+		.option {
+			&:not(:last-child):after {
+				content: var(--space);
+			}
+		}
 	}
 
 	.frame {

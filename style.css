@@ -250,6 +250,9 @@ body .footer {
   align-items: center;
   justify-content: center;
 }
+body .footer .option:not(:last-child):after {
+  content: var(--space);
+}
 body .frame {
   flex: 1 1 auto;
   overflow: hidden;

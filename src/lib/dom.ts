@@ -1,5 +1,7 @@
 export class Dom {
 
+	root = this._doc.documentElement;
+
 	constructor(
 		private _doc = document,
 	) { }
