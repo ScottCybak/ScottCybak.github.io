@@ -34,22 +34,26 @@
   --font-size-small: 0.8rem;
   --font-size-large: 1.5rem;
   --watermark-font-size: 64px;
-  --mint: #b5d5b7;
-  --orange: #efbb5d;
+  --accent-color: #b5d5b7;
+  --link-color: #efbb5d;
+  --dark-accent-color: #b5d5b7;
+  --dark-link-color: #efbb5d;
   --dark-background: #333;
   --dark-background-even: #222;
   --dark-background-alternate: #ffffff11;
   --dark-color: #ddd;
   --dark-border-color: #555;
   --dark-border: var(--border-width) var(--border-style) var(--dark-border-color);
-  --dark-link: var(--orange);
+  --dark-link: var(--link-color);
   --light-background: #eee;
   --light-background-alternate: #ddd;
   --light-background-even: #fff;
   --light-color: #444;
   --light-border-color: #ddd;
   --light-border: var(--border-width) var(--border-style) var(--light-border-color);
-  --light-link: var(--orange);
+  --light-link: var(--link-color);
+  --light-accent-color: #2eb5b0;
+  --light-link-color: #d464b6;
 }
 
 :root {
@@ -87,22 +91,26 @@
   --font-size-small: 0.8rem;
   --font-size-large: 1.5rem;
   --watermark-font-size: 64px;
-  --mint: #b5d5b7;
-  --orange: #efbb5d;
+  --accent-color: #b5d5b7;
+  --link-color: #efbb5d;
+  --dark-accent-color: #b5d5b7;
+  --dark-link-color: #efbb5d;
   --dark-background: #333;
   --dark-background-even: #222;
   --dark-background-alternate: #ffffff11;
   --dark-color: #ddd;
   --dark-border-color: #555;
   --dark-border: var(--border-width) var(--border-style) var(--dark-border-color);
-  --dark-link: var(--orange);
+  --dark-link: var(--link-color);
   --light-background: #eee;
   --light-background-alternate: #ddd;
   --light-background-even: #fff;
   --light-color: #444;
   --light-border-color: #ddd;
   --light-border: var(--border-width) var(--border-style) var(--light-border-color);
-  --light-link: var(--orange);
+  --light-link: var(--link-color);
+  --light-accent-color: #2eb5b0;
+  --light-link-color: #d464b6;
 }
 
 html {
@@ -111,6 +119,18 @@ html {
 
 ::-webkit-scrollbar {
   width: var(--padding);
+}
+
+:root {
+  --border-color: var(--light-border-color);
+  --border: var(--light-border);
+  --background: var(--light-background);
+  --background-alternate: var(--light-background-alternate);
+  --background-even: var(--light-background-even);
+  --color: var(--light-color);
+  --link: var(--light-link);
+  --accent-color: var(--light-accent-color);
+  --link-color: var(--light-link-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -122,6 +142,8 @@ html {
     --background-even: var(--dark-background-even);
     --color: var(--dark-color);
     --link: var(--dark-link);
+    --accent-color: var(--dark-accent-color);
+    --link-color: var(--dark-link-color);
   }
 
   ::-webkit-scrollbar-track {
@@ -131,18 +153,7 @@ html {
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--mint);
-  }
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --border-color: var(--light-border-color);
-    --border: var(--light-border);
-    --background: var(--light-background);
-    --background-alternate: var(--light-background-alternate);
-    --background-even: var(--light-background-even);
-    --color: var(--light-color);
-    --link: var(--light-link);
+    background: var(--accent-color);
   }
 }
 @media screen and (max-width: 640px) {
@@ -280,7 +291,7 @@ body .frame #now, body .frame #epoch {
 #timeline .block label {
   cursor: inherit;
   border: var(--border);
-  color: var(--orange);
+  color: var(--link-color);
   white-space: nowrap;
   font-size: var(--font-size-small);
   position: relative;
@@ -291,8 +302,8 @@ body .frame #now, body .frame #epoch {
   top: calc(50% - (var(--font-size-small) / 2) - calc(var(--padding) / 2));
 }
 #timeline .block.active label {
-  border-color: var(--mint);
-  background: var(--mint);
+  border-color: var(--accent-color);
+  background: var(--accent-color);
   color: var(--background);
 }
 #timeline .bar {
@@ -301,7 +312,7 @@ body .frame #now, body .frame #epoch {
   top: calc(0px - var(--padding));
   bottom: calc(0px - var(--padding));
   left: calc(50% - 1px);
-  border-left: 2px solid var(--mint);
+  border-left: 2px solid var(--accent-color);
 }
 
 .date {
@@ -445,10 +456,10 @@ body .frame #now, body .frame #epoch {
 #filter .option {
   transition: all 100ms ease-in-out;
   line-height: 2rem;
-  color: var(--orange);
+  color: var(--link-color);
 }
 #filter .option.active {
-  color: var(--mint);
+  color: var(--accent-color);
 }
 #filter .option:not(.active) {
   cursor: pointer;
