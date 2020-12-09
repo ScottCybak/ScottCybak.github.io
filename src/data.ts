@@ -1,6 +1,7 @@
 export interface SocialLink {
 	href: string;
 	label: string;
+	classes?: string[];
 }
 
 export interface Screenshot {
@@ -63,6 +64,11 @@ export const links: SocialLink[] = [
 	{
 		href: 'https://github.com/scottcybak',
 		label: 'GitHub',
+	},
+	{
+		href: 'https://github.com/ScottCybak/ScottCybak.github.io/',
+		label: 'Source Code',
+		classes: ['smol', 'space-above'],
 	}
 ];
 

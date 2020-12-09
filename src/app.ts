@@ -82,6 +82,7 @@ export class App {
 				a.href = link.href;
 				a.innerText = link.label;
 				li.appendChild(a);
+				link?.classes?.forEach(klass => a.classList.add(klass));
 				return li;
 			})
 			.forEach(li => el.appendChild(li));

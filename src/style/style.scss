@@ -96,7 +96,6 @@ body, input, textarea, button {
 	padding: calc(var(--padding) / 2) var(--padding);
 	position: relative;
 	align-items: center;
-	z-index: -1;
 	
 	.watermark {
 		font-size: 15vw;
@@ -105,7 +104,7 @@ body, input, textarea, button {
 		left: 0;
 		white-space: nowrap;
 		position: absolute;
-		z-index: 0;
+		z-index: -1;
 		color: #00000044;
 		opacity: 0.15;
 		font-weight: bold;
@@ -126,25 +125,8 @@ body {
 	@include vh('height', 100);
 	overflow: hidden;
 
-	.header, .footer {
+	.header {
 		flex: 0 0 auto;
-	}
-
-	.footer {
-		font-size: var(--font-size-tiny);
-		background: var(--background-even);
-		border-top: var(--border);
-		padding: var(--padding);
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-
-		.option {
-			&:not(:last-child):after {
-				content: var(--space);
-			}
-		}
 	}
 
 	.frame {
@@ -443,6 +425,12 @@ body {
 	}
 }
 
+.smol {
+	font-size: var(--font-size-small);
+}
+.space-above {
+	margin-top: calc(var(--padding) * 2);
+}
 
 @include sm {
 	.prefix,
