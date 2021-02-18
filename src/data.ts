@@ -74,7 +74,7 @@ export const links: SocialLink[] = [
 
 export const experience: Experience[] = [
 	{
-		from: new Date(2017, 2, 1),
+		from: new Date(2017, 10, 1),
 		company: 'Auxilium Group',
 		location: WINDSOR,
 		category: CATEGORY.DEVELOPER,
@@ -88,8 +88,8 @@ export const experience: Experience[] = [
 		],
 	},
 	{
-		from: new Date(2015, 10, 1),
-		to: new Date(2017, 1, 1),
+		from: new Date(2016, 10, 1),
+		to: new Date(2017, 10, 1),
 		company: 'Splice Digital',
 		location: WINDSOR,
 		category: CATEGORY.DEVELOPER,
@@ -98,8 +98,8 @@ export const experience: Experience[] = [
 		tags: [TAG.GIT, TAG.JAVASCRIPT, TAG.MYSQL, TAG.RX, TAG.TYPESCRIPT, TAG.SASS, TAG.PHP, TAG.WORDPRESS, TAG.LARAVEL],
 	},
 	{
-		from: new Date(2012, 2, 1),
-		to: new Date(2015, 10, 1),
+		from: new Date(2013, 2, 1),
+		to: new Date(2016, 10, 1),
 		company: 'Auxilium Group',
 		location: WINDSOR,
 		category: CATEGORY.DEVELOPER,
@@ -109,7 +109,7 @@ export const experience: Experience[] = [
 	},
 	{
 		from: new Date(2009, 3, 1),
-		to: new Date(2012, 2, 1),
+		to: new Date(2013, 2, 1),
 		company: 'Glentel',
 		location: WINDSOR,
 		category: CATEGORY.RETAIL,
