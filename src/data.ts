@@ -28,11 +28,13 @@ export const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'A
 export enum CATEGORY {
 	DEVELOPER = 'Developer',
 	RETAIL = 'Retail Management',
-	TRANSPORTATION = 'logistics',
+	TRANSPORTATION = 'Logistics',
 	ALL = 'All',
 }
 
 export enum TAG {
+	CSHARP = 'C#',
+	DOTNET = '.Net',
 	ANGULAR = 'Angular',
 	RX = 'RxJs',
 	MYSQL = 'MySQL',
@@ -47,6 +49,7 @@ export enum TAG {
 	SASS = 'SCSS/SASS',
 	WORDPRESS = 'Wordpress',
 	LARAVEL = 'Laravel',
+	MSSQL = 'MSSql',
 }
 
 export enum POSITION {
@@ -54,6 +57,8 @@ export enum POSITION {
 	JR_DEV = 'Junior Developer',
 	STORE_MGR = 'Store Manager',
 	SALES = 'Sales Associate',
+	ANGULAR_SME = 'Angular SME',
+	FRONTEND = 'Frontend',
 }
 
 export const links: SocialLink[] = [
@@ -74,7 +79,17 @@ export const links: SocialLink[] = [
 
 export const experience: Experience[] = [
 	{
+		from: new Date(2021, 2, 1),
+		company: 'Rocket Innovation Studio',
+		location: WINDSOR,
+		category: CATEGORY.DEVELOPER,
+		description: `Brought in primarily as an Angular S.M.E., in my role as Senior Developer in an Agile environment.  Responsible for contributing to the code base, while also mentoring junior developers, advising others, while also assisting with analysis and planning.  Also assisted in updating the new candidate hiring guides where my experience justified it, as well as contributing to the creation of internal code policies.`,
+		positions: [POSITION.SENIOR_DEV, POSITION.ANGULAR_SME, POSITION.FRONTEND],
+		tags: [TAG.ANGULAR, TAG.GIT, TAG.JAVASCRIPT, TAG.MSSQL, TAG.RX, TAG.TYPESCRIPT, TAG.SASS, TAG.DOTNET, TAG.CSHARP],
+	},
+	{
 		from: new Date(2017, 10, 1),
+		to: new Date(2021, 2, 1),
 		company: 'Auxilium Group',
 		location: WINDSOR,
 		category: CATEGORY.DEVELOPER,
@@ -125,13 +140,4 @@ export const experience: Experience[] = [
 		positions: [POSITION.STORE_MGR, POSITION.SALES],
 		description: 'Seasonal sales-associate to Store Manager of a "B" volume store.',
 	},
-	// {
-	// 	to: new Date(2006, 10, 1),
-	// 	from: new Date(2005, 10, 1),
-	// 	company: 'Future Shop',
-	// 	location: WINDSOR,
-	// 	category: CATEGORY.RETAIL,
-	// 	positions: [POSITION.SALES],
-	// 	description: 'Sales associate in the IPG/Computer department, where my extended warranty and attach rates consistently kept me in the top-10 nationwide',
-	// }
 ]
