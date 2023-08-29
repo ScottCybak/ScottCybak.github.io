@@ -23,6 +23,7 @@ export interface Experience {
 }
 
 export const WINDSOR = 'Windsor, Ontario';
+export const LONDON = 'London, Ontario';
 export const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 export const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 export enum CATEGORY {
@@ -37,6 +38,8 @@ export enum TAG {
 	DOTNET = '.Net',
 	ANGULAR = 'Angular',
 	RX = 'RxJs',
+	NGRX = 'NgRx',
+	NGXS = 'NgXs',
 	MYSQL = 'MySQL',
 	GIT = 'Git',
 	TYPESCRIPT = 'Typescript',
@@ -50,6 +53,7 @@ export enum TAG {
 	WORDPRESS = 'Wordpress',
 	LARAVEL = 'Laravel',
 	MSSQL = 'MSSql',
+	TAILWIND = 'Tailwind',
 }
 
 export enum POSITION {
@@ -79,13 +83,23 @@ export const links: SocialLink[] = [
 
 export const experience: Experience[] = [
 	{
+		from: new Date(2022, 2, 1),
+		company: 'Lawlabs',
+		location: LONDON,
+		category: CATEGORY.DEVELOPER,
+		description: '',
+		positions: [POSITION.SENIOR_DEV, POSITION.FRONTEND],
+		tags: [TAG.ANGULAR, TAG.GIT, TAG.JAVASCRIPT, TAG.NGXS, TAG.TAILWIND, TAG.MSSQL, TAG.RX, TAG.TYPESCRIPT, TAG.SASS],
+	},
+	{
 		from: new Date(2021, 2, 1),
+		to: new Date(2022, 2, 1),
 		company: 'Rocket Innovation Studio',
 		location: WINDSOR,
 		category: CATEGORY.DEVELOPER,
 		description: `Brought in primarily as an Angular S.M.E., in my role as Senior Developer in an Agile environment.  Responsible for contributing to the code base, while also mentoring junior developers, advising others, while also assisting with analysis and planning.  Also assisted in updating the new candidate hiring guides where my experience justified it, as well as contributing to the creation of internal code policies.`,
 		positions: [POSITION.SENIOR_DEV, POSITION.ANGULAR_SME, POSITION.FRONTEND],
-		tags: [TAG.ANGULAR, TAG.GIT, TAG.JAVASCRIPT, TAG.MSSQL, TAG.RX, TAG.TYPESCRIPT, TAG.SASS, TAG.DOTNET, TAG.CSHARP],
+		tags: [TAG.ANGULAR, TAG.GIT, TAG.JAVASCRIPT, TAG.NGRX, TAG.MSSQL, TAG.RX, TAG.TYPESCRIPT, TAG.SASS, TAG.DOTNET, TAG.CSHARP],
 	},
 	{
 		from: new Date(2017, 10, 1),
@@ -121,23 +135,5 @@ export const experience: Experience[] = [
 		positions: [POSITION.SENIOR_DEV, POSITION.JR_DEV],
 		description: `Started as a junior front-end developer, and quickly grew my skills to finish up the first version of their Datalynk project (a cloud-based Database management suite), also while patching and adding new modules to their e-learning platform.`,
 		tags: [TAG.GIT, TAG.JAVASCRIPT, TAG.MYSQL, TAG.DOJO, TAG.CSS, TAG.PHP],
-	},
-	{
-		from: new Date(2009, 3, 1),
-		to: new Date(2013, 2, 1),
-		company: 'Glentel',
-		location: WINDSOR,
-		category: CATEGORY.RETAIL,
-		description: `Starting as a sales-associate at a low volume store, I quickly worked my way up through the ranks to become the store manager responsible for the highest volume store in our area.`,
-		positions: [POSITION.STORE_MGR, POSITION.SALES],
-	},
-	{
-		to: new Date(2009, 3, 1),
-		from: new Date(2006, 10, 1),
-		company: 'The Source',
-		location: WINDSOR,
-		category: CATEGORY.RETAIL,
-		positions: [POSITION.STORE_MGR, POSITION.SALES],
-		description: 'Seasonal sales-associate to Store Manager of a "B" volume store.',
 	},
 ]
